@@ -1,8 +1,25 @@
+import Header from "./component/header";
+import Footer from "./component/footer";
+import Sidebar from "./component/sidebar";
+import PostList from "./component/postList";
+
 function App() {
   return (
     <>
-      <h1>social media</h1>
-      <h1>deployment complete</h1>
+      <div className="d-flex flex-column min-vh-100">
+        <Header />
+
+        <div className="d-flex flex-grow-1">
+          <Sidebar />
+
+          <PostList></PostList>
+
+          <main className="flex-grow-1 p-3 bg-light">
+            <h4>Main Content Yahan Aayega</h4>
+          </main>
+        </div>
+        <Footer />
+      </div>
     </>
   );
 }
