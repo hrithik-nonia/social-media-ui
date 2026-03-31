@@ -3,9 +3,13 @@ import { CiHome } from "react-icons/ci";
 import { IoIosCreate } from "react-icons/io";
 import { useState } from "react";
 import CreatePost from "./sidebar-element/createPost";
+import SettingElements from "./sidebar-element/manageProfile/settings";
+import ProfileElements from "./sidebar-element/manageProfile/profile";
 
 const Sidebar = () => {
   const [showForm, setShowForm] = useState(false);
+  const [showSettingElements, setShowSettingElements] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
   return (
     <>
       <div
@@ -67,17 +71,20 @@ const Sidebar = () => {
           </a>
           <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
             <li>
-              <a className="dropdown-item" href="#">
-                New project...
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
+              <a
+                className="dropdown-item"
+                href="#"
+                onClick={() => setShowSettingElements(true)}
+              >
                 Settings
               </a>
             </li>
             <li>
-              <a className="dropdown-item" href="#">
+              <a
+                className="dropdown-item"
+                href="#"
+                onClick={() => setShowProfile(true)}
+              >
                 Profile
               </a>
             </li>
@@ -92,6 +99,16 @@ const Sidebar = () => {
           </ul>
         </div>
       </div>
+      {showSettingElements && (
+        <SettingElements
+          onClose={() => setShowSettingElements(false)}
+        ></SettingElements>
+      )}
+      {showProfile && (
+        <ProfileElements
+          onClose={() => setShowProfile(false)}
+        ></ProfileElements>
+      )}
     </>
   );
 };

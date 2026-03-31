@@ -1,3 +1,4 @@
+import Logo from "../assets/logo/logo-img-code";
 const Footer = () => {
   return (
     <>
@@ -8,7 +9,7 @@ const Footer = () => {
             className="mb-3 me-2 mb-md-0 text-white text-decoration-none lh-1"
             aria-label="Bootstrap"
           >
-            img.....
+            <Logo></Logo>
           </a>
           <span className="mb-3 mb-md-0 text-white ">© 2025 Company, Inc</span>
         </div>
@@ -17,7 +18,7 @@ const Footer = () => {
           <li className="ms-3">
             <a
               className="text-white text-decoration-none"
-              href="#"
+              href="https://www.instagram.com/"
               aria-label="Instagram"
             >
               instagram
@@ -26,7 +27,7 @@ const Footer = () => {
           <li className="ms-3">
             <a
               className="text-white text-decoration-none"
-              href="#"
+              href="https://www.facebook.com/"
               aria-label="Facebook"
             >
               facebook

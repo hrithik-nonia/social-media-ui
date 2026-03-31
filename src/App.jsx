@@ -1,8 +1,7 @@
 import Header from "./component/header";
 import Footer from "./component/footer";
 import Sidebar from "./component/sidebar";
-import PostList from "./component/postList";
-
+import MainSection from "./component/mainSection";
 function App() {
   return (
     <>
@@ -12,10 +11,10 @@ function App() {
         <div className="d-flex flex-grow-1">
           <Sidebar />
 
-          <PostList></PostList>
-
           <main className="flex-grow-1 p-3 bg-light">
-            <h4>Main Content Yahan Aayega</h4>
+            <h4>
+              <MainSection></MainSection>
+            </h4>
           </main>
         </div>
         <Footer />
